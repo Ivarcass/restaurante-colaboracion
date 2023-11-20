@@ -23,4 +23,8 @@ public class Jefe{
     public void setAnosExp(int nuevoAnosExp) {
         anosExp = nuevoAnosExp;
     }
+    
+    public void imprimirDetalles(){
+        System.out.println("El nombre del jefe es: " + nombre + ", y sus años de experiencia son: " + anosExp);
+    }
 }
