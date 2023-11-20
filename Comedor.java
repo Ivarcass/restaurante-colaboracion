@@ -18,7 +18,7 @@ public class Comedor{
         }
         return horaDeApertura;
     }
-    
+
     public String getHoraCierre() {
         String horaDeCierre;
         if (horaCierre < 10) {
@@ -29,8 +29,21 @@ public class Comedor{
         }
         return horaDeCierre;
     }
-    
+
     public String getEncargado() {
-        return "El nombre del encargado es: " + encargado.getNombre() + " | Tiene " + encargado.getAnosExp() + " años de experiencia";
+        return "El nombre del encargado es: " + encargado.getNombre() + " | Tiene " + encargado.getAnosExp() + " anos de experiencia";
+    }
+
+    public void setHoraApertura(int newHoraDeApertura) {
+        horaApertura = newHoraDeApertura;
+    }
+
+    public void setHoraCierre(int newHoraDeCierre) {
+        horaCierre = newHoraDeCierre;
+    }
+
+    public void setEncargado(String newNombre, int newAnosExp){
+        encargado.setNombre(newNombre);
+        encargado.setAnosExp(newAnosExp);
     }
 }
