@@ -7,4 +7,30 @@ public class Comedor{
         horaCierre = horaDeCierre;
         encargado = new Jefe(nombreJefe, anosExperiencia);
     }
+
+    public String getHoraApertura() {
+        String horaDeApertura;
+        if (horaApertura < 10) {
+            horaDeApertura =  "0" + horaApertura + ":00";
+        }
+        else {
+            horaDeApertura = horaApertura + ":00";
+        }
+        return horaDeApertura;
+    }
+    
+    public String getHoraCierre() {
+        String horaDeCierre;
+        if (horaCierre < 10) {
+            horaDeCierre =  "0" + horaCierre + ":00";
+        }
+        else {
+            horaDeCierre = horaCierre + ":00";
+        }
+        return horaDeCierre;
+    }
+    
+    public String getEncargado() {
+        return "El nombre del encargado es: " + encargado.getNombre() + " | Tiene " + encargado.getAnosExp() + " años de experiencia";
+    }
 }
