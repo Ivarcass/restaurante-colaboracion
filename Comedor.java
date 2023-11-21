@@ -46,4 +46,26 @@ public class Comedor{
         encargado.setNombre(newNombre);
         encargado.setAnosExp(newAnosExp);
     }
+    
+    public void imprimirDetalles() {
+        String horaDeApertura;
+        if (horaApertura < 10) {
+            horaDeApertura =  "0" + horaApertura + ":00";
+        }
+        else {
+            horaDeApertura = horaApertura + ":00";
+        }
+        
+        String horaDeCierre;
+        if (horaCierre < 10) {
+            horaDeCierre =  "0" + horaCierre + ":00";
+        }
+        else {
+            horaDeCierre = horaCierre + ":00";
+        }
+        
+        System.out.println("La hora de apertura es a las " + horaDeApertura);
+        System.out.println("La hora de cierre es a las " + horaDeCierre);
+        System.out.println("El nombre del encargado es: " + encargado.getNombre() + " | Tiene " + encargado.getAnosExp() + " anos de experiencia");
+    }
 }
